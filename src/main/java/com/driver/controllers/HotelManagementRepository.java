@@ -23,7 +23,7 @@ public class HotelManagementRepository {
     }
 
     public String saveHotel(Hotel hotel) {
-        if (hotel.getHotelName().equals(null) || hotel == null) return "FAILURE";
+        if (hotel.getHotelName() == null || hotel == null) return "FAILURE";
         if (hotelDb.containsKey(hotel.getHotelName())) return "FAILURE";
         hotelDb.put(hotel.getHotelName(), hotel);
         return "SUCCESS";
